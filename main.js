@@ -6,12 +6,15 @@ class App {
   }
 
   async main() {
-    const response = await input.text("What is your Password?");
-    console.log("Password");
-    if (response == this.answer) {
-      console.log("Correct");
-    } else {
-      console.log("Incorrect");
+    let response;
+    while (response != this.answer) {
+      response = await input.text("What is your Password?");
+      if (response == this.answer) {
+        console.log("Correct");
+        return;
+      } else {
+        console.log("Incorrect");
+      }
     }
   }
 }
