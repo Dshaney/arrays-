@@ -1,23 +1,28 @@
 class pet {
-  constructor(species, name, color, eyes) {
+  constructor(species, name, color, eyes, breed, age, gender) {
     this.species = species;
     this.name = name;
-    this.color = color
-    this.eyes= eyes
+    this.color = color;
+    this.eyes = eyes;
+    this.breed = breed;
+    this.age = age;
+    this.gender = gender;
   }
-  describe (){
-      console.log(
-          `this is a ${this.species},`
-          + `my ${this.name} happens to be a ${this.species},`
-          +`his eyes are ${this.eyes} `
-          +`and his skin color is ${this.color}!`
-      );
+  describe() {
+    console.log(
+        `${this.name} happens to be a ${this.species}, ` +
+        `her eyes are ${this.eyes} ` +
+        `and her skin color is ${this.color}! `+
+        `She is a ${this.gender} `+
+        `her age is ${this.age} `+
+        `and she is a ${this.breed}.`
+    );
   }
 }
 function main() {
-  const myPet = new pet("Wolf", "Jr.", "Red", "Green");
+  const myPet = new pet("Wolf", "Brit", "Red", "Crytal Blue", "Siberian Huskey", "2", "Female");
 
- myPet.describe()
+  myPet.describe();
 }
 
 main();
