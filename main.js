@@ -9,18 +9,24 @@ class Pet {
     this.gender = gender;
   }
   describe() {
-    console.log(
-        `${this.name} happens to be a ${this.species}, ` +
-        `her eyes are ${this.eyes} ` +
-        `and her skin color is ${this.color}! `+
-        `She is a ${this.gender} `+
-        `her age is ${this.age} `+
-        `and she is a ${this.breed}.`
-    );
+    if (this.gender == "female") {
+      console.log(`${this.name} happens to be a ${this.species} and he is a ${this.breed}`);
+    } else {
+      console.log(`${this.name} happens to be a ${this.species} and she is a ${this.breed}`);
+    }
   }
 }
+
 function main() {
-  const myPet = new Pet("Wolf", "Brit", "Red", "Crytal Blue", "Siberian Huskey", "2", "Female");
+  const myPet = new Pet(
+    "Wolf",
+    "Brit",
+    "Red",
+    "Crytal Blue",
+    "Siberian Huskey",
+    2,
+    "female"
+  );
 
   myPet.describe();
 }
