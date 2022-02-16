@@ -1,34 +1,20 @@
-class Pet {
-  constructor(species, name, color, eyes, breed, age, gender) {
-    this.species = species;
-    this.name = name;
-    this.color = color;
-    this.eyes = eyes;
-    this.breed = breed;
-    this.age = age;
-    this.gender = gender;
+import input from "input";
+
+class App {
+  constructor(password) {
+    this.answer = password;
   }
-  describe() {
-    if (this.gender == "female") {
-      console.log(`${this.name} happens to be a ${this.species} and he is a ${this.breed}`);
+
+  async main() {
+    const response = await input.text("What is your Password?");
+    console.log("Password");
+    if (response == this.answer) {
+      console.log("Correct");
     } else {
-      console.log(`${this.name} happens to be a ${this.species} and she is a ${this.breed}`);
+      console.log("Incorrect");
     }
   }
 }
 
-function main() {
-  const myPet = new Pet(
-    "Wolf",
-    "Brit",
-    "Red",
-    "Crytal Blue",
-    "Siberian Huskey",
-    2,
-    "female"
-  );
-
-  myPet.describe();
-}
-
-main();
+const app = new App("My Password");
+app.main();
