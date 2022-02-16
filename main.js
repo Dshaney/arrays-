@@ -1,4 +1,4 @@
-class pet {
+class Pet {
   constructor(species, name, color, eyes, breed, age, gender) {
     this.species = species;
     this.name = name;
@@ -20,7 +20,7 @@ class pet {
   }
 }
 function main() {
-  const myPet = new pet("Wolf", "Brit", "Red", "Crytal Blue", "Siberian Huskey", "2", "Female");
+  const myPet = new Pet("Wolf", "Brit", "Red", "Crytal Blue", "Siberian Huskey", "2", "Female");
 
   myPet.describe();
 }
